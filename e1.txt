@@ -1,0 +1,8 @@
+ola.newTable(1,1)
+oi.newTable(1,1)
+oka.sum(ola,oi)
+oka.printTable()
+ola.newTable(3,2)
+ola.getColumn(1)
+ola.removeColumn(1)
+ola.printTable()

@@ -1,0 +1,76 @@
+// dictionaries: allows simple translations
+
+// templates:
+
+module(name,stat) ::= <<
+public class <name> {
+   public static void main(String[] args) {
+      <stats(stat)>
+   }
+}
+>>
+
+stats(stat) ::= <<
+<if(stat)><stat; separator="\n"><endif>
+>>
+
+
+printTable(stat,expr) ::= <<
+<stats(stat)>
+<expr>.printTable();
+>>
+
+newTabela(stat,e1,e2,e3) ::= <<
+<stats(stat)>
+Tabela <e1> = new Tabela(<e2>,<e3>);
+>>
+
+saveFile(stat,e1,e2) ::= <<
+<stats(stat)>
+<e1>.saveFile("<e2>.csv");
+>>
+
+removeColumn(stat, e1, e2)  ::= <<
+<stats(stat)>
+<e1>.removeColumn(<e2>);
+>>
+
+removeLine(stat, e1, e2)  ::= <<
+<stats(stat)>
+<e1>.removeLine(<e2>);
+>>
+
+addLine(stat, e1)  ::= <<
+<stats(stat)>
+<e1>.addLine();
+>>
+
+addColumn(stat, e1, e2)  ::= <<
+<stats(stat)>
+<e1>.addColumn("<e2>");
+>>
+
+
+getColumn(stat,e1,e2) ::= <<
+<stats(stat)>
+<e1>.getColumn(<e2>);
+>>
+
+getLine(stat,e1,e2) ::= <<
+<stats(stat)>
+<e1>.getLine(<e2>);
+>>
+
+equals(stat, e1,e2)::= <<
+<stats(stat)>
+Tabela <e1> = <e2>;
+>>
+
+read(stat,e1,e2) ::= <<
+<stats(stat)>
+Tabela <e1> = new Tabela("<e2>.csv");
+>>
+sum(stat,e1,e2,e3) ::= <<
+<stats(stat)>
+Tabela <e1> = <e2>.sum(<e3>);
+>>

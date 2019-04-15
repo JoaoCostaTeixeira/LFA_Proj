@@ -1,2 +1,7 @@
-# LFA_Proj
-Linguagens Formais e Autómatos ( Formal And Automated Languages )
+﻿# LFA Final Project
+
+Universidade de Aveiro
+https://www.ua.pt/uc/2570
+
+
+
